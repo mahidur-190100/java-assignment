@@ -25,7 +25,6 @@ function  onlyCharacter( str ) {
 // problem 03
 function  bestTeam( player1, player2 ) {
      if (typeof player1 !== 'object' || typeof player2 !== 'object'){
-
         return "Invalid";
      }
     const team1Score = player1.foul + player1.cardY + player1.cardR;
@@ -35,12 +34,12 @@ function  bestTeam( player1, player2 ) {
     } else if (team2Score < team1Score) {
         return player2.name;
     } else {
-        return "Tie";
+        return ("Tie")
     }
 
 }
-// fair_play =bestTeam({ name: "Germany", foul: 10, cardY: 1, cardR: 1 },
-// { name: "France", foul: 10, cardY: 2, cardR: 1 })
+// fair_play =bestTeam({ name: "Germany", foul: 12, cardY: 0, cardR: 0 },
+// { name: "Sweden", foul: 7, cardY: 4, cardR: 1 })
 // console.log(fair_play)
 
 // problem 04
@@ -59,7 +58,6 @@ if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
     return true;
 }
 // same= isSame([1, undefined , 3] , [1,null ,3])       
-
 // console.log (same)
 
 // problem 05
@@ -70,7 +68,6 @@ function resultReport(marks) {
     if (marks.length === 0) {
         return { finalScore:0,pass:0,fail:0 };
     }
-
     let sum = 0;
     let pass_count = 0;
     let fail_count = 0;
@@ -84,10 +81,10 @@ function resultReport(marks) {
          }
     }
     let average =Math.round (sum / marks.length)
-
     return {finalScore:average,pass:pass_count,fail:fail_count}
+    
 }
-// report = resultReport([99])
+// report = resultReport([99,25])
 // console.log (report)
 
 
